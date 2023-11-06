@@ -5,12 +5,13 @@
     font-family: 'Titillium Web', sans-serif;
 }
 :root {
-    --gray-800: #5f93e6;
+    --gray-800: #1E293B;
     --gray-600: #475569;
     --purple: #7c3aed;
     --gray-200: #e2e8f0;
     --gray-400: #94a3b8;
     --white: #FFF;
+    --light-purple: #9f67ff;
 }
 header {
     background-image: url(./imagens/bg-mobile.png);
@@ -96,6 +97,11 @@ main {
 .bg-desktop {
     display: none;
 }
+.login button:hover {
+    background: var(--light-purple);
+    transition: 0.3s;
+    cursor: pointer;
+}
 @media(min-width: 1000px) {
     body {
         display: flex;
@@ -103,20 +109,32 @@ main {
     header {
         background: none;
         justify-content: flex-start;
-        padding-inline: 7rem;
+        margin: 2.5rem 7rem 7rem;
+       
+        height: fit-content;
     }
     header img {
         width: 10rem;
     }
     main {
-        padding-inline: 7rem;
+        margin-inline: 7rem;
+        max-width: 24rem;
+        padding: 0;
     }
     .conteudo {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-   
     .bg-desktop {
         display: block;
         width: 100%;
+    }
+    .descricao h1 {
+        font-size: 2.25rem;
+    }
+    .descricao p {
+        font-size: 1rem;
     }
 }
